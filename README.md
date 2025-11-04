@@ -2,6 +2,9 @@
 
 Curiosity project exploring a classic lattice model of magnetism with a simple sampler and clean plots. 
 
+NB: The data was too large.... had to seperate into folders. 
+This repo is for archival purposes for code in Python, LaTex and C++
+
 ## What this does (short)
 - Simulates a 2D grid of spins (each spin is either +1 or −1).
 - Uses Markov Chain Monte Carlo (Metropolis) to sample configurations at a given temperature.
@@ -9,7 +12,6 @@ Curiosity project exploring a classic lattice model of magnetism with a simple s
 - Detects the phase transition by scanning temperature and estimating the critical temperature.
 - Optional parallelization to speed up long runs.
 
-## Why it’s useful 
 This model can be used in finance, because it is a neat proxy for “regime changes” — at low temperature spins align (ordered), at high temperature they randomize (disordered). That mirrors how markets can flip between calm and turbulent regimes. MCMC sampling is also a staple in Bayesian portfolio models and risk estimation.
 Furthermore, MCMC is a workhorse for sampling complex, high‑dimensional distributions. The Ising model gives a clean sandbox to practice sampling, autocorrelation, burn‑in, and parallel runs. Skills that transfer to probabilistic modeling and generative methods.
 
@@ -81,15 +83,4 @@ g++ --std=c++17 -Wall -O3 -o src/main objectFiles/*.o
 ./src/main
 ```
 
-## Project Structure
-- This project was created to solve the problems found in [Project 4](https://anderkve.github.io/FYS3150/book/projects/project4.html). 
-- Every problem is solved in `main.cpp`, but the code is divided into multiple files to make it more readable. The code is divided into the following files and folders:
-    - data: All data and graphs produced
-    - include: Header files (`.h`)
-    - objectFiles: Object files (`.o`)
-    - scripts: Scripts to plot data (python)
-    - src: Source files (`.cpp`)
-    - tex: LaTeX files (`.tex`)
-    - makefile: Makefile to compile the code, placed in the root folder
-    - `.keep` files are added in all folders to be recognized by git
 
